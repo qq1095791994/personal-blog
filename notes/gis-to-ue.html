@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="江汉的实践笔记：从 GIS 数据到 Unreal Engine 实时可视化场景。">
+  <title>从 GIS 数据到 UE 场景｜江汉的实践笔记</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="article.css">
+</head>
+<body>
+  <header><a href="../index.html">江汉 <span>JIANG HAN</span></a><a href="../index.html#writing">返回作品集 ↗</a></header>
+  <main>
+    <div class="article-hero"><p>实践笔记 / GIS + UE</p><h1>从 GIS 数据<br>到 UE 场景</h1><p class="deck">做可视化时，画面效果固然重要。让位置、模型、属性与实时场景对得上，项目才有可用的基础。</p><div class="article-meta"><span>江汉</span><span>约 6 分钟阅读</span></div></div>
+    <figure class="cover"><img src="../assets/work/city-02.webp" alt="中国区域数据在 UE 可视化界面中的展示"><figcaption>个人作品资料中的智慧城市可视化画面</figcaption></figure>
+    <article>
+      <p class="lead">这些年我参与智慧城市与工业可视化项目，常常要在 GIS、BIM 和 UE 之间来回切换。下面记录几个在实际制作中反复遇到的环节。它是一篇方法笔记，不指向某个特定客户项目。</p>
+      <h2>先让数据的位置可信</h2><p>城市级场景往往从底图、SHP、倾斜摄影和建筑模型开始。坐标系统、道路边界与地形高程如果在早期没有统一，后面的镜头、标注和交互都会不断返工。我会先检查数据覆盖范围、坐标与精度，再按用途决定哪些内容需要完整保留，哪些可以简化。</p>
+      <figure><img src="../assets/work/city-03.webp" alt="地形与城市信息叠加的 UE 可视化画面" loading="lazy"><figcaption>地形、模型与业务信息共同构成场景</figcaption></figure>
+      <h2>模型进入引擎后，要为实时运行重新整理</h2><p>从 Revit 或其他建模流程来的 BIM 数据，通常带有大量细节和属性。视觉质量与运行效率要一起考虑：拆分层级、合并重复对象、处理材质与光照，并保留之后查询需要的构件信息。这样场景既能看，也能被交互使用。</p>
+      <h2>把系统状态变成能读懂的画面</h2><p>可视化不是把图表贴在三维城市上。信息密度、镜头距离、昼夜与天气变化都会影响阅读。我更关注在不同尺度下突出什么：全局看分布，局部看事件和属性，交互后再给出更细的信息。</p>
+      <figure><img src="../assets/work/city-05.webp" alt="工业设施实时可视化画面" loading="lazy"><figcaption>局部视角需要让空间和数据对应起来</figcaption></figure>
+      <h2>形成可复用的流程</h2><p>在团队协作中，标准化的导入规则、材质方案与功能模块比单次手工调整更有价值。天气、昼夜、季节以及信息查询等能力可以逐渐沉淀成模块，让后续场景更快进入稳定状态。</p>
+      <p>现在我把这些经验带向智能空间：空间不仅被看见，也能根据真实数据与人的行为做出回应。</p>
+    </article>
+    <div class="article-end"><a href="../index.html#work">继续看作品 <span>↗</span></a><a href="mailto:1095791994@qq.com">交流项目 <span>↗</span></a></div>
+  </main>
+  <footer><span>© 2026 江汉</span><span>图像来自个人作品资料</span></footer>
+</body>
+</html>
