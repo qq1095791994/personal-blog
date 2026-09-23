@@ -1,8 +1,7 @@
-const button = document.querySelector('.theme-toggle');
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme === 'dark') document.body.classList.add('dark');
-button.addEventListener('click', () => {
-  document.body.classList.toggle('dark');
-  localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
-});
-document.querySelector('#year').textContent = new Date().getFullYear();
+const canvas=document.querySelector('#field'),ctx=canvas.getContext('2d');let w,h,pts=[];
+function size(){w=canvas.width=innerWidth*devicePixelRatio;h=canvas.height=innerHeight*devicePixelRatio;pts=Array.from({length:Math.min(75,Math.floor(innerWidth/18))},()=>({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.18,vy:(Math.random()-.5)*.18}))}size();addEventListener('resize',size);
+function draw(){ctx.clearRect(0,0,w,h);for(const p of pts){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>w)p.vx*=-1;if(p.y<0||p.y>h)p.vy*=-1;ctx.fillStyle='#c7ff31';ctx.fillRect(p.x,p.y,1.5*devicePixelRatio,1.5*devicePixelRatio)}for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){let dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.hypot(dx,dy);if(d<150*devicePixelRatio){ctx.strokeStyle=`rgba(199,255,49,${.11*(1-d/(150*devicePixelRatio))})`;ctx.beginPath();ctx.moveTo(pts[i].x,pts[i].y);ctx.lineTo(pts[j].x,pts[j].y);ctx.stroke()}}requestAnimationFrame(draw)}draw();
+const cursor=document.querySelector('.cursor');addEventListener('mousemove',e=>{cursor.style.left=e.clientX+'px';cursor.style.top=e.clientY+'px'});document.querySelectorAll('a,button,.visual').forEach(el=>{el.addEventListener('mouseenter',()=>{cursor.style.width='48px';cursor.style.height='48px';cursor.style.background='#c7ff3122'});el.addEventListener('mouseleave',()=>{cursor.style.width='18px';cursor.style.height='18px';cursor.style.background='transparent'})});
+document.querySelectorAll('.project,.intro-copy,.jobs article,.skills>div,.contact>div').forEach(el=>el.classList.add('reveal'));const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.13});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+document.querySelectorAll('.play').forEach(btn=>btn.addEventListener('click',()=>{const v=btn.parentElement.querySelector('video');if(v.paused){document.querySelectorAll('video').forEach(x=>x!==v&&x.pause());v.play();btn.textContent='PAUSE'}else{v.pause();btn.textContent='PLAY'}}));
+document.querySelectorAll('.project').forEach(p=>{p.addEventListener('mouseenter',()=>document.documentElement.style.setProperty('--lime',p.dataset.color||'#c7ff31'));p.addEventListener('mouseleave',()=>document.documentElement.style.setProperty('--lime','#c7ff31'))});

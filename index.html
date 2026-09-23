@@ -1,55 +1,14 @@
-<!doctype html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="个人博客：记录技术、创作与生活。" />
-  <title>我的个人博客</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="返回首页">拾光<span>志</span></a>
-    <nav aria-label="主导航">
-      <a href="#articles">文章</a><a href="#about">关于</a><a href="#contact">联系</a>
-    </nav>
-    <button class="theme-toggle" aria-label="切换深色模式">◐</button>
-  </header>
-
-  <main id="top">
-    <section class="hero">
-      <p class="eyebrow">DESIGN · CODE · LIFE</p>
-      <h1>记录思考，<br><em>创造</em>有趣的事。</h1>
-      <p class="intro">你好，我是一名热爱 3D、游戏开发与技术创作的探索者。这里收藏我的学习笔记、项目复盘和生活灵感。</p>
-      <a class="cta" href="#articles">开始阅读 <span>↘</span></a>
-      <div class="orb" aria-hidden="true"><div></div></div>
-    </section>
-
-    <section class="articles" id="articles">
-      <div class="section-heading"><span>01</span><h2>最新文章</h2><p>持续学习，持续记录</p></div>
-      <div class="article-grid">
-        <article class="featured">
-          <a href="posts/hello-world.html">
-            <div class="cover cover-one"><span>HELLO<br>WORLD</span></div>
-            <div class="article-copy"><p class="meta">随笔 · 5 分钟阅读</p><h3>从这里开始：我的第一篇博客</h3><p>为什么要建立这个博客，以及我希望在这里记录些什么。</p><span class="read-more">阅读全文 →</span></div>
-          </a>
-        </article>
-        <article><div class="date"><b>23</b><span>SEP 2026</span></div><div><p class="meta">开发笔记</p><h3>UE5 开发环境搭建记录</h3><p>Visual Studio、C++、Python 与 Node.js 的配置要点。</p></div></article>
-        <article><div class="date"><b>18</b><span>SEP 2026</span></div><div><p class="meta">三维创作</p><h3>Blender 与 3ds Max 工作流</h3><p>把灵感变成作品的工具选择和实践心得。</p></div></article>
-      </div>
-    </section>
-
-    <section class="about" id="about">
-      <div class="section-heading"><span>02</span><h2>关于我</h2></div>
-      <div class="about-grid"><blockquote>“好奇心是最好的<br>创作引擎。”</blockquote><div><p>我关注游戏开发、实时渲染、三维设计和实用工具。这个博客既是公开笔记，也是一个长期成长的数字花园。</p><p>目前正在学习 UE5 与 C++，也会分享 Python 自动化、前端开发和作品制作过程。</p><div class="tags"><span>UE5</span><span>C++</span><span>Blender</span><span>Python</span></div></div></div>
-    </section>
-
-    <section class="contact" id="contact"><p>有想法想聊聊？</p><h2>让我们保持联系。</h2><a href="mailto:your@email.com">your@email.com ↗</a></section>
-  </main>
-  <footer><span>© <span id="year"></span> 拾光志</span><span>用好奇心构建</span></footer>
-  <script src="script.js"></script>
-</body>
-</html>
+<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="江汉 - 智能空间、实时交互与3D视觉作品集"><title>江汉 | Spatial Experience Director</title><link rel="stylesheet" href="styles.css"></head>
+<body><canvas id="field" aria-hidden="true"></canvas><div class="noise"></div><div class="cursor"></div>
+<header><a class="logo" href="#home">JH<span>®</span></a><nav><a href="#work">WORK</a><a href="#profile">PROFILE</a><a href="#contact">CONTACT</a></nav><div class="status"><i></i> AVAILABLE FOR IDEAS</div></header>
+<main><section class="hero" id="home"><div class="hero-kicker"><span>CHENGDU · CHINA</span><span>2018 — NOW</span></div><h1><span>DESIGNING</span><span class="outline">INTELLIGENT</span><span>SPACES<span class="lime">.</span></span></h1><div class="hero-foot"><p>把空间、数据与实时视觉连接起来。<br>创造可感知、可交互、可生长的数字体验。</p><a href="#work" class="round-link">EXPLORE<br>WORK <b>↘</b></a></div><div class="coordinates">30.5728° N<br>104.0668° E</div></section>
+<div class="ticker"><div>INTELLIGENT SPACE <i>✦</i> UNREAL ENGINE <i>✦</i> DIGITAL TWIN <i>✦</i> HMI EXPERIENCE <i>✦</i> REAL-TIME 3D <i>✦</i>&nbsp;</div><div>INTELLIGENT SPACE <i>✦</i> UNREAL ENGINE <i>✦</i> DIGITAL TWIN <i>✦</i> HMI EXPERIENCE <i>✦</i> REAL-TIME 3D <i>✦</i>&nbsp;</div></div>
+<section class="intro" id="profile"><div class="section-index">01 / PROFILE</div><div class="intro-copy"><p class="super">我是江汉，<em>智能空间与实时视觉</em>方向的创作者和团队负责人。</p><p class="body-copy">从游戏次世代美术、智慧城市与工业仿真，到量产车机 HMI，再到智能空间体验，我用 UE、3D 与数据驱动技术，把复杂系统转化为直观、有情绪的空间体验。</p><div class="stats"><div><strong>8<span>+</span></strong><small>YEARS / 3D EXPERIENCE</small></div><div><strong>30<span>+</span></strong><small>PROJECTS / DELIVERED</small></div><div><strong>4</strong><small>FIELDS / CROSS-INDUSTRY</small></div></div></div></section>
+<section class="selected" id="work"><div class="section-title"><span>02 / SELECTED WORK</span><h2>跨越屏幕与空间的<br><em>实时体验</em></h2></div>
+<article class="project feature" data-color="#c7ff31"><div class="visual"><img src="assets/city-digital.webp" alt="智能空间与城市数字孪生项目"><span class="project-no">01</span><span class="view">SELECTED CASE ↗</span></div><div class="project-info"><div><h3>INTELLIGENT<br>SPACE</h3><p>智能空间 · 数字孪生 · 实时数据</p></div><p>将物理空间、设备数据和实时内容融为一体，探索空间感知、场景联动与沉浸式交互的新边界。</p></div></article>
+<div class="grid"><article class="project" data-color="#69d9ff"><div class="visual"><video src="assets/auto-motion.mp4" muted loop playsinline preload="metadata" poster="assets/auto-racing.webp"></video><span class="project-no">02</span><button class="play">PLAY</button></div><div class="project-info"><div><h3>AUTOMOTIVE<br>HMI</h3><p>量产车机 · 交互场景 · COCOS / 3D</p></div></div></article><article class="project" data-color="#ff704d"><div class="visual"><img src="assets/game-temple.webp" alt="UE 古庙实时场景"><span class="project-no">03</span></div><div class="project-info"><div><h3>REAL-TIME<br>WORLDS</h3><p>UE 场景 · 环境叙事 · 视觉研发</p></div></div></article></div>
+<article class="project feature reverse" data-color="#db78ff"><div class="visual"><video src="assets/motion-loop.mp4" muted loop playsinline preload="metadata" poster="assets/game-fantasy.webp"></video><span class="project-no">04</span><button class="play">PLAY</button></div><div class="project-info"><div><h3>IMMERSIVE<br>VISUALS</h3><p>沉浸式视觉 · 游戏环境 · 动态叙事</p></div><p>以场景氛围、镜头语言和实时特效建立完整的视觉体验，在艺术表达与运行效率之间取得平衡。</p></div></article><div class="mosaic"><img src="assets/auto-offroad.webp" alt="奥迪越野模式车机视觉"><img src="assets/city-aerial.webp" alt="智慧城市实时可视化"><img src="assets/auto-festival.webp" alt="节日车机主题"><img src="assets/game-fantasy.webp" alt="UE 东方幻想场景"></div></section>
+<section class="timeline"><div class="section-index">03 / JOURNEY</div><div class="jobs"><article><time>2026 — NOW</time><div><h3>智能空间 / 实时体验</h3><p>围绕智能空间开展实时内容、空间交互与视觉体验设计，让数字系统进入真实环境。</p></div><b>↗</b></article><article><time>2024 — 2026</time><div><h3>成都加马智博 · 成都美术负责人</h3><p>管理美术团队，主导深蓝 S05 / S07、奥迪 POC 与多家车企量产项目的视觉技术路线。</p></div><b>↗</b></article><article><time>2021 — 2024</time><div><h3>成都兽子科技 · UE 美术组长</h3><p>带领团队交付智慧城市、工业仿真项目，推动 Houdini、PCG、Cesium 与 GIS 数据流程。</p></div><b>↗</b></article><article><time>2018 — 2021</time><div><h3>从游戏美术到数字孪生</h3><p>从次世代资产制作出发，完成军工仿真、智慧城市和可视化项目的完整能力构建。</p></div><b>↗</b></article></div></section>
+<section class="skills"><div class="skill-orbit"><span>UE</span><span>HOUDINI</span><span>CESIUM</span><span>PCG</span><span>GIS / BIM</span><span>3DS MAX</span><span>C4D</span><span>COCOS</span><strong>TOOLS<br>& SYSTEMS</strong></div><div><p class="section-index">04 / CAPABILITIES</p><h2>从视觉概念到<br>可运行的系统。</h2><ul><li>智能空间体验设计</li><li>UE 实时场景与技术美术</li><li>数字孪生与 GIS / BIM 可视化</li><li>车机 HMI 全流程美术</li><li>美术团队与项目交付管理</li></ul></div></section>
+<section class="contact" id="contact"><img src="assets/portrait.webp" alt="江汉"><div><p>HAVE A SPACE TO REIMAGINE?</p><h2>一起创造下一个<br><em>智能场景。</em></h2><a href="mailto:1095791994@qq.com">1095791994@qq.com <span>↗</span></a></div></section></main>
+<footer><span>© 2026 JIANG HAN</span><span>SPATIAL EXPERIENCE · REAL-TIME 3D</span><a href="#home">BACK TO TOP ↑</a></footer><script src="script.js"></script></body></html>
