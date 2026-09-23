@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="个人博客：记录技术、创作与生活。" />
+  <title>我的个人博客</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="返回首页">拾光<span>志</span></a>
+    <nav aria-label="主导航">
+      <a href="#articles">文章</a><a href="#about">关于</a><a href="#contact">联系</a>
+    </nav>
+    <button class="theme-toggle" aria-label="切换深色模式">◐</button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <p class="eyebrow">DESIGN · CODE · LIFE</p>
+      <h1>记录思考，<br><em>创造</em>有趣的事。</h1>
+      <p class="intro">你好，我是一名热爱 3D、游戏开发与技术创作的探索者。这里收藏我的学习笔记、项目复盘和生活灵感。</p>
+      <a class="cta" href="#articles">开始阅读 <span>↘</span></a>
+      <div class="orb" aria-hidden="true"><div></div></div>
+    </section>
+
+    <section class="articles" id="articles">
+      <div class="section-heading"><span>01</span><h2>最新文章</h2><p>持续学习，持续记录</p></div>
+      <div class="article-grid">
+        <article class="featured">
+          <a href="posts/hello-world.html">
+            <div class="cover cover-one"><span>HELLO<br>WORLD</span></div>
+            <div class="article-copy"><p class="meta">随笔 · 5 分钟阅读</p><h3>从这里开始：我的第一篇博客</h3><p>为什么要建立这个博客，以及我希望在这里记录些什么。</p><span class="read-more">阅读全文 →</span></div>
+          </a>
+        </article>
+        <article><div class="date"><b>23</b><span>SEP 2026</span></div><div><p class="meta">开发笔记</p><h3>UE5 开发环境搭建记录</h3><p>Visual Studio、C++、Python 与 Node.js 的配置要点。</p></div></article>
+        <article><div class="date"><b>18</b><span>SEP 2026</span></div><div><p class="meta">三维创作</p><h3>Blender 与 3ds Max 工作流</h3><p>把灵感变成作品的工具选择和实践心得。</p></div></article>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="section-heading"><span>02</span><h2>关于我</h2></div>
+      <div class="about-grid"><blockquote>“好奇心是最好的<br>创作引擎。”</blockquote><div><p>我关注游戏开发、实时渲染、三维设计和实用工具。这个博客既是公开笔记，也是一个长期成长的数字花园。</p><p>目前正在学习 UE5 与 C++，也会分享 Python 自动化、前端开发和作品制作过程。</p><div class="tags"><span>UE5</span><span>C++</span><span>Blender</span><span>Python</span></div></div></div>
+    </section>
+
+    <section class="contact" id="contact"><p>有想法想聊聊？</p><h2>让我们保持联系。</h2><a href="mailto:your@email.com">your@email.com ↗</a></section>
+  </main>
+  <footer><span>© <span id="year"></span> 拾光志</span><span>用好奇心构建</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
