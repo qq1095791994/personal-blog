@@ -14,6 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="preload" href="assets/work/concept-intelligent-space.webp" as="image">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="assets/cg/spatial-scene.css">
 </head>
 <body>
   <a class="skip-link" href="#main">跳到正文</a>
@@ -26,6 +27,7 @@
   <main id="main">
     <section class="hero" id="top" aria-labelledby="hero-title">
       <img class="hero-image" src="assets/work/concept-intelligent-space.webp" alt="智能空间主题概念视觉：带有发光装置的现代建筑空间" fetchpriority="high">
+      <div class="cg-scene" data-cg-scene aria-hidden="true"></div>
       <div class="hero-shade"></div>
       <div class="hero-copy">
         <p class="hero-id">江汉 <span></span> 实时视觉 / 空间体验</p>
@@ -33,7 +35,8 @@
         <p class="hero-lede">从车机座舱到城市现场，我用三维场景、实时引擎和交互设计，把复杂系统变成直观的体验。</p>
         <a class="hero-action" href="#work">进入作品集 <span aria-hidden="true">↓</span></a>
       </div>
-      <div class="hero-bottom"><span>成都 · 视觉技术 / 团队管理</span><span>智能空间概念视觉 · AI 生成，非实际项目</span></div>
+      <div class="hero-scene-cue" aria-hidden="true"><span>REALTIME / SPATIAL</span><span>移动光标，探索光的路径</span></div>
+      <div class="hero-bottom"><span>成都 · 视觉技术 / 团队管理</span><span>实时 CG + AI 后备图 · 非实际项目</span></div>
     </section>
 
     <div class="discipline-strip" aria-label="工作方向"><span>车机 HMI</span><i></i><span>智慧城市</span><i></i><span>实时场景</span><i></i><span>智能空间</span></div>
@@ -47,7 +50,7 @@
     </section>
 
     <section class="work section-shell" id="work" aria-labelledby="work-title">
-      <div class="section-head"><div><p class="section-kicker">精选作品</p><h2 id="work-title">从座舱到城市现场</h2></div><p>以下画面选自个人作品资料。点击项目可以查看完整图集与工作说明。</p></div>
+      <div class="section-head"><div><p class="section-kicker">精选作品</p><h2 id="work-title">从座舱到城市现场</h2></div><p>以下画面选自个人作品资料。部分封面经过 AI 辅助后期处理，项目图集保留原始画面，点击可对照查看。</p></div>
       <div class="filters" role="group" aria-label="筛选作品"><button type="button" class="active" data-filter="all" aria-pressed="true">全部</button><button type="button" data-filter="hmi" aria-pressed="false">车机 HMI</button><button type="button" data-filter="city" aria-pressed="false">城市与空间</button><button type="button" data-filter="scene" aria-pressed="false">实时场景</button></div>
       <div class="work-grid">
         <button class="work-card card-wide" type="button" data-project="audi" data-category="hmi" aria-label="查看车机 HMI 视觉方案图集">
@@ -59,19 +62,19 @@
           <span class="card-caption"><span><small>智慧城市 / GIS + UE</small><strong>让城市数据进入实时场景</strong></span><span class="card-arrow" aria-hidden="true">↗</span></span>
         </button>
         <button class="work-card" type="button" data-project="urban" data-category="city" aria-label="查看城市空间可视化图集">
-          <span class="card-images"><img src="assets/work/urban-02.webp" alt="UE 城市建筑与公共空间效果" loading="lazy"><span class="card-stack"><img src="assets/work/urban-01.webp" alt="城市街道实时场景" loading="lazy"><img src="assets/work/urban-04.webp" alt="公共空间实时场景" loading="lazy"></span></span>
+          <span class="card-images"><img src="assets/work/graded/urban-02.png" alt="UE 城市建筑与公共空间效果的 AI 辅助后期封面" loading="lazy"><span class="card-stack"><img src="assets/work/urban-01.webp" alt="城市街道实时场景" loading="lazy"><img src="assets/work/urban-04.webp" alt="公共空间实时场景" loading="lazy"></span><span class="card-grade">AI 辅助后期</span></span>
           <span class="card-caption"><span><small>空间可视化 / UE</small><strong>可漫游的城市与建筑空间</strong></span><span class="card-arrow" aria-hidden="true">↗</span></span>
         </button>
         <button class="work-card card-wide" type="button" data-project="season" data-category="hmi" aria-label="查看车机主题视觉图集">
-          <span class="card-images"><img src="assets/work/season-02.webp" alt="车机中秋节主题画面" loading="lazy"><span class="card-stack"><img src="assets/work/season-03.webp" alt="车机圣诞节主题画面" loading="lazy"><img src="assets/work/season-04.webp" alt="车机春节主题画面" loading="lazy"></span></span>
+          <span class="card-images"><img src="assets/work/graded/season-02.png" alt="车机中秋节主题画面的 AI 辅助后期封面" loading="lazy"><span class="card-stack"><img src="assets/work/season-03.webp" alt="车机圣诞节主题画面" loading="lazy"><img src="assets/work/season-04.webp" alt="车机春节主题画面" loading="lazy"></span><span class="card-grade">AI 辅助后期</span></span>
           <span class="card-caption"><span><small>座舱主题 / 氛围设计</small><strong>把节日情绪带进座舱</strong></span><span class="card-arrow" aria-hidden="true">↗</span></span>
         </button>
         <button class="work-card" type="button" data-project="temple" data-category="scene" aria-label="查看 UE 古庙场景图集">
-          <span class="card-images"><img src="assets/work/temple-01.webp" alt="UE 古庙实时场景" loading="lazy"><span class="card-stack"><img src="assets/work/temple-02.webp" alt="古庙角色与光影" loading="lazy"><img src="assets/work/temple-04.webp" alt="古庙场景细节" loading="lazy"></span></span>
+          <span class="card-images"><img src="assets/work/graded/temple-01.png" alt="UE 古庙实时场景的 AI 辅助后期封面" loading="lazy"><span class="card-stack"><img src="assets/work/temple-02.webp" alt="古庙角色与光影" loading="lazy"><img src="assets/work/temple-04.webp" alt="古庙场景细节" loading="lazy"></span><span class="card-grade">AI 辅助后期</span></span>
           <span class="card-caption"><span><small>游戏场景 / UE</small><strong>古庙：材质、光影与叙事</strong></span><span class="card-arrow" aria-hidden="true">↗</span></span>
         </button>
         <button class="work-card" type="button" data-project="fantasy" data-category="scene" aria-label="查看 UE 仙侠场景图集">
-          <span class="card-images"><img src="assets/work/fantasy-04.webp" alt="UE 东方幻想建筑场景" loading="lazy"><span class="card-stack"><img src="assets/work/fantasy-01.webp" alt="东方幻想山水场景" loading="lazy"><img src="assets/work/fantasy-02.webp" alt="东方幻想细节场景" loading="lazy"></span></span>
+          <span class="card-images"><img src="assets/work/graded/fantasy-04.png" alt="UE 东方幻想建筑场景的 AI 辅助后期封面" loading="lazy"><span class="card-stack"><img src="assets/work/fantasy-01.webp" alt="东方幻想山水场景" loading="lazy"><img src="assets/work/fantasy-02.webp" alt="东方幻想细节场景" loading="lazy"></span><span class="card-grade">AI 辅助后期</span></span>
           <span class="card-caption"><span><small>实时环境 / UE</small><strong>仙侠：建立可以进入的世界</strong></span><span class="card-arrow" aria-hidden="true">↗</span></span>
         </button>
       </div>
@@ -87,9 +90,10 @@
 
     <section class="contact" id="contact"><div><p>江汉 · 成都</p><h2>有新的空间，<br>一起把它做出来。</h2><a href="mailto:1095791994@qq.com">1095791994@qq.com <span aria-hidden="true">↗</span></a></div><p class="contact-aside">智能空间 / 车机 HMI / 实时视觉 / UE 场景</p></section>
   </main>
-  <footer><span>© <span id="year">2026</span> 江汉</span><span>真实项目图片来自个人作品资料；概念视觉已单独标注。</span><a href="#top">回到顶部 ↑</a></footer>
+  <footer><span>© <span id="year">2026</span> 江汉</span><span>项目原图来自个人作品资料；AI 概念视觉与辅助后期封面均已标注。</span><a href="#top">回到顶部 ↑</a></footer>
 
-  <dialog id="project-dialog" class="project-dialog" aria-labelledby="dialog-title"><button class="dialog-close" type="button" aria-label="关闭项目图集">×</button><div class="dialog-layout"><div class="dialog-media"><img id="dialog-image" alt=""><div class="dialog-controls"><button id="prev-image" type="button" aria-label="上一张图片">←</button><span id="image-count"></span><button id="next-image" type="button" aria-label="下一张图片">→</button></div><div id="dialog-thumbs" class="dialog-thumbs"></div></div><div class="dialog-copy"><p id="dialog-category"></p><h2 id="dialog-title"></h2><p id="dialog-description"></p><dl><div><dt>我的工作</dt><dd id="dialog-role"></dd></div><div><dt>图集</dt><dd id="dialog-gallery-size"></dd></div></dl></div></div></dialog>
+  <dialog id="project-dialog" class="project-dialog" aria-labelledby="dialog-title"><button class="dialog-close" type="button" aria-label="关闭项目图集">×</button><div class="dialog-layout"><div class="dialog-media"><img id="dialog-image" alt=""><div class="dialog-controls"><button id="prev-image" type="button" aria-label="上一张图片">←</button><span id="image-count"></span><button id="next-image" type="button" aria-label="下一张图片">→</button></div><p id="dialog-image-note" class="dialog-image-note"></p><div id="dialog-thumbs" class="dialog-thumbs"></div></div><div class="dialog-copy"><p id="dialog-category"></p><h2 id="dialog-title"></h2><p id="dialog-description"></p><dl><div><dt>我的工作</dt><dd id="dialog-role"></dd></div><div><dt>图集</dt><dd id="dialog-gallery-size"></dd></div></dl></div></div></dialog>
   <script src="site.js" defer></script>
+  <script src="assets/cg/spatial-scene.js" defer></script>
 </body>
 </html>

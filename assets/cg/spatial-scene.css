@@ -1,0 +1,25 @@
+.cg-scene {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 800ms ease;
+}
+
+.cg-scene.is-active { opacity: 1; }
+
+.hero .hero-shade,
+.hero .hero-copy,
+.hero .hero-bottom { z-index: 2; }
+
+.cg-scene canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cg-scene { transition: none; }
+}
