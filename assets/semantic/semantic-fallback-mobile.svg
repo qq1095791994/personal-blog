@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 410" role="img" aria-labelledby="title desc">
+  <title id="title">空间语义概念房间</title>
+  <desc id="desc">入口、协作桌面和具身设备在透视房间中，通过路径与关系线连接。</desc>
+  <defs>
+    <linearGradient id="bg" x2="0" y2="1"><stop stop-color="#0d202b"/><stop offset="1" stop-color="#1c3943"/></linearGradient>
+    <linearGradient id="floor" x2="0.8" y2="1"><stop stop-color="#294751"/><stop offset="1" stop-color="#102a34"/></linearGradient>
+  </defs>
+  <rect width="390" height="410" fill="url(#bg)"/>
+  <path d="M44 91 313 66 313 204 44 223Z" fill="#1f3d47" stroke="#71929a" stroke-opacity=".55"/>
+  <path d="M313 66 370 107 370 330 313 204Z" fill="#16323d" stroke="#71929a" stroke-opacity=".45"/>
+  <path d="M44 223 313 204 370 330 20 361Z" fill="url(#floor)" stroke="#76989d" stroke-opacity=".75"/>
+  <g fill="none" stroke="#8aafb4" stroke-opacity=".22">
+    <path d="M86 220 70 356M131 216 130 351M176 213 190 346M221 210 250 341M266 207 310 336"/>
+    <path d="M35 326 357 302M39 292 343 271M42 258 326 236"/>
+    <path d="M165 80 165 214M248 72 248 207"/>
+  </g>
+  <path d="M72 129 117 125 117 217 72 221Z" fill="#0a232d" stroke="#a6cdd0" stroke-width="2.4"/>
+  <path d="M78 135 111 132 111 214 78 217Z" fill="#28525b" fill-opacity=".55"/>
+  <path d="M67 223 124 219" stroke="#dfa681" stroke-width="4"/>
+  <path d="M202 122 292 115 292 169 202 176Z" fill="#477c87" fill-opacity=".25" stroke="#9ac2c4" stroke-opacity=".55"/>
+  <path d="M211 136 280 131M211 148 263 144M211 160 272 155" stroke="#b6d6d3" stroke-opacity=".45"/>
+  <path d="M99 225C120 255 142 303 180 312S245 303 273 280" fill="none" stroke="#e0a47d" stroke-width="3.5" stroke-dasharray="8 7"/>
+  <path d="M99 166C128 142 190 168 280 234M174 270C210 231 254 226 280 234" fill="none" stroke="#a9cbd0" stroke-opacity=".65" stroke-dasharray="3 5"/>
+  <path d="M241 252 307 247 329 263 260 269Z" fill="#a8c6c7" stroke="#d7e0dc"/>
+  <path d="M260 269 329 263 329 276 260 284Z" fill="#41616b"/>
+  <path d="M241 252 260 269 260 284 241 266Z" fill="#2c4d57"/>
+  <path d="M264 283 271 283 271 313 264 314ZM312 278 319 277 319 307 312 308Z" fill="#466873"/>
+  <path d="M264 249 291 247 304 254 276 256Z" fill="#285361" stroke="#b2d5d4"/>
+  <path d="M160 280 179 275 199 282 180 289Z" fill="#789da1" stroke="#d1e1db"/>
+  <path d="M160 280 180 289 180 308 160 300Z" fill="#385d68"/>
+  <path d="M180 289 199 282 199 299 180 308Z" fill="#244751"/>
+  <path d="M168 260 179 256 190 260 179 265Z" fill="#97b7b7" stroke="#d7e6df"/>
+  <path d="M168 260 179 265 179 281 168 276Z" fill="#4c6f78"/>
+  <path d="M179 265 190 260 190 276 179 281Z" fill="#2b535e"/>
+  <path d="M173 255 186 255" stroke="#dca37b" stroke-width="2"/>
+  <g fill="#efd0b5" stroke="#dea781" stroke-width="2"><circle cx="95" cy="167" r="5"/><circle cx="280" cy="234" r="5"/><circle cx="179" cy="266" r="5"/></g>
+  <g font-family="sans-serif" font-weight="600" font-size="13" fill="#ecf3ef">
+    <rect x="50" y="101" width="48" height="28" fill="#102a34" stroke="#d29c79"/><text x="61" y="120">入口</text>
+    <rect x="287" y="214" width="76" height="28" fill="#102a34" stroke="#9bc5ca"/><text x="295" y="233">协作桌面</text>
+    <rect x="115" y="306" width="76" height="28" fill="#102a34" stroke="#9bc5ca"/><text x="123" y="325">具身设备</text>
+  </g>
+</svg>

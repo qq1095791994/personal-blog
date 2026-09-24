@@ -21,7 +21,7 @@ const projects = {
     description: '从整体城市形态到步行视角，实时场景让方案能够被漫游和审视。图集展示商业空间与建筑环境的不同尺度。',
     role: 'UE 场景美术、建筑空间表现与视觉效果调整。',
     images: path('urban', 6),
-    enhanced: 'assets/work/graded/urban-02.png',
+    enhanced: 'assets/work/graded/urban-02.webp',
     enhancedOriginalIndex: 2
   },
   season: {
@@ -30,7 +30,7 @@ const projects = {
     description: '中秋、圣诞和春节等主题把车辆、环境和氛围动效组合成一套座舱体验。这里展示的是作品资料中收录的车机主题画面。',
     role: '车机项目的主题视觉与场景表现。',
     images: path('season', 4),
-    enhanced: 'assets/work/graded/season-02.png',
+    enhanced: 'assets/work/graded/season-02.webp',
     enhancedOriginalIndex: 2
   },
   temple: {
@@ -39,7 +39,7 @@ const projects = {
     description: '石材、植被、角色和光线共同构成可探索的场景。不同视角展示了环境细节和整体氛围。',
     role: '实时场景美术与材质、光影表现。',
     images: path('temple', 5),
-    enhanced: 'assets/work/graded/temple-01.png',
+    enhanced: 'assets/work/graded/temple-01.webp',
     enhancedOriginalIndex: 1
   },
   fantasy: {
@@ -48,7 +48,7 @@ const projects = {
     description: '以山体、屋檐、路径和远景组织空间层次，让东方幻想世界在实时引擎中形成连续的观看体验。',
     role: '场景搭建、资产整合与环境氛围表现。',
     images: path('fantasy', 5),
-    enhanced: 'assets/work/graded/fantasy-04.png',
+    enhanced: 'assets/work/graded/fantasy-04.webp',
     enhancedOriginalIndex: 4
   }
 };

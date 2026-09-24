@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="江汉的实践笔记：从三维场景走向空间智能，讨论模型精度、空间关系、对象语义与具身行动线索。">
+  <title>从 3D 场景到空间智能｜江汉的实践笔记</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="article.css">
+</head>
+<body>
+  <header><a href="../index.html">江汉 <span>JIANG HAN</span></a><a href="../index.html#writing">返回作品集 ↗</a></header>
+  <main>
+    <div class="article-hero"><p>方向笔记 / AI × 智能 × 3D 空间</p><h1>从 3D 场景<br>到空间智能</h1><p class="deck">让模型拥有关系、语义与行动线索：从可信的三维底座，逐步走向能够理解和回应真实环境的系统。</p><div class="article-meta"><span>江汉</span><span>约 4 分钟阅读</span></div></div>
+    <figure class="cover"><img src="../assets/work/city-05.webp" alt="个人作品资料中的三维可视化场景" fetchpriority="high"><figcaption>过往 UE / 城市可视化作品资料。它展示的是三维场景经验，不代表已落地空间识别或机器人项目。</figcaption></figure>
+    <article>
+      <p class="lead">我过去的工作集中在 3D 场景、UE 实时呈现，以及 GIS、BIM 数据进入可视化系统的流程。近期做智能空间相关工作时，我开始思考下一步：场景除了能看、能漫游，还能否成为机器理解环境的基础？下面是我正在整理的方法方向，并非已经交付的空间识别或具身机器案例。</p>
+
+      <h2>高精度模型，先解决“可信”</h2>
+      <p>空间模型可以由测绘、扫描、多视角重建、人工建模或生成式工具提供初稿。来源不同，误差也不同。真正用于后续判断时，我会先把比例、坐标、边界和构件层级对齐，再检查遮挡处、细薄结构、材质与重复物体。AI 可以加快补全和方案探索，但关键尺寸、通行范围与设备位置仍要由原始数据和人工复核。对于没有可靠依据的区域，应标记“不确定”，而不是用逼真的纹理掩盖缺口。</p>
+
+      <h2>识别空间关系，才知道物体在哪里</h2>
+      <p>一张漂亮的模型图不能说明门通向哪里、桌子挡住了哪条路径。空间关系需要同时记录包含、邻接、连接、遮挡与可达性：房间包含设备，门连接区域，家具改变人的动线。这些关系可以组织成可查询的场景结构，并与 GIS 位置、BIM 构件及实时状态对应。识别结果还要经过人工抽查，尤其是玻璃、镜面、临时摆放物和动态人流等容易误判的部分。</p>
+
+      <h2>给对象定义，再谈行动</h2>
+      <p>“椅子”不只是一个网格名称。对象需要稳定标识、类别、位置、尺寸、状态以及使用限制；有些还需要明确可移动、可开启或危险区域等属性。机器若要在空间中行动，必须把这些语义与定位、避障、任务目标和实时感知放在一起。一个可视化场景可以帮助表达行动线索，却不能直接证明机器人能安全完成抓取或移动。具身应用还需要在真实设备与环境中校准、测试，并为误识别和人机共处留出保护机制。</p>
+
+      <figure><img src="../assets/work/concept-digital-twin.webp" alt="以建筑空间与数据层为主题的 AI 概念视觉" loading="lazy"><figcaption>AI 概念视觉，仅用于说明“空间 + 数据 + 语义”的探索方向，非实际交付画面。</figcaption></figure>
+
+      <h2>图片和视频，让过程可以被看懂</h2>
+      <p>内容生产也应服务于验证。原始截图展示模型和交互的真实状态；带标注的图片说明对象、关系与数据来源；短视频则适合呈现状态变化、视角切换和一次完整的反馈流程。AI 生成图可用来探索气氛、构图和未来场景，但要明确标为概念视觉。若画面经过生成、合成或后期增强，应保留对应原图与说明，避免让观众把设想误认成已完成的功能。</p>
+
+      <h2>从一个小场景开始验证</h2>
+      <p>我更愿意选一个边界清楚的空间做原型：先确定模型精度和对象清单，再定义几种可检查的关系与状态，最后让实时画面给出明确反馈。每一步都留下数据来源、人工校验记录和失败案例。这样，过去积累的 UE、GIS、BIM 与技术美术经验，才有机会稳妥地连接到 AI 和空间智能的新问题上。</p>
+    </article>
+    <div class="article-end"><a href="../index.html#work">继续看作品 <span>↗</span></a><a href="mailto:1095791994@qq.com">交流项目 <span>↗</span></a></div>
+  </main>
+  <footer><span>© 2026 江汉</span><span>真实作品与 AI 概念视觉已分别标注</span></footer>
+</body>
+</html>

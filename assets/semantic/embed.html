@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>空间语义交互模块示例</title>
+  <base href="../../">
+  <link rel="stylesheet" href="assets/semantic/semantic-room.css">
+  <style>body{margin:0;padding:clamp(18px,4vw,60px);background:#e9eeed;font-family:"Noto Sans SC","Microsoft YaHei",sans-serif}.preview{max-width:1360px;margin:auto}</style>
+</head>
+<body>
+  <!-- 集成时复制下面的 section；base 标签和 preview 样式仅供本页预览。 -->
+  <main class="preview">
+    <section class="semantic-scene" data-semantic-scene aria-label="空间语义概念演示">
+      <div class="semantic-scene__stage">
+        <picture class="semantic-scene__fallback-image">
+          <source media="(max-width: 900px)" srcset="assets/semantic/semantic-fallback-mobile.svg">
+          <img src="assets/semantic/semantic-fallback.svg" alt="透视房间里有入口、协作桌面和具身设备，地面路径与连线表示三者的空间关系">
+        </picture>
+        <p class="semantic-scene__caption">入口 / 桌面 / 具身设备 · 空间关系概念演示</p>
+      </div>
+      <div class="semantic-scene__panel">
+        <p class="semantic-scene__kicker">空间语义 · 概念演示</p>
+        <h3>空间中的物体，如何彼此关联？</h3>
+        <p class="semantic-scene__intro">点选房间中的三个对象，查看它们的位置、可达关系和设备路径。所有标签和关系均由设计者预先设定。</p>
+        <div class="semantic-scene__facts">
+          <details id="semantic-entry" data-semantic-detail="entry" open>
+            <summary>入口</summary>
+            <p>在这个演示中，入口被定义为通行区域。具身设备的预设路径从这里进入房间。</p>
+            <dl><dt>关系</dt><dd>连接外部与室内工作区</dd><dt>动作</dt><dd>通过、接近（设计示意）</dd></dl>
+          </details>
+          <details id="semantic-desk" data-semantic-detail="desk">
+            <summary>协作桌面</summary>
+            <p>桌面被定义为可接近的任务目标。路径在桌前结束，表示设备可以在此参与空间中的服务流程。</p>
+            <dl><dt>关系</dt><dd>位于房间内，与路径终点相邻</dd><dt>动作</dt><dd>接近、交互（设计示意）</dd></dl>
+          </details>
+          <details id="semantic-robot" data-semantic-detail="robot">
+            <summary>具身设备</summary>
+            <p>设备沿预设轨迹移动，用来表达空间、对象与行动之间的联系。它没有接入摄像头或真实识别模型。</p>
+            <dl><dt>关系</dt><dd>入口 → 设备 → 桌面</dd><dt>路径</dt><dd>预设轨迹，无实时避障</dd></dl>
+          </details>
+        </div>
+        <p class="semantic-scene__notice">本画面是视觉概念演示；物体标签、关系与路径均为手工设定，不代表 AI 实时识别、追踪或导航结果。</p>
+      </div>
+    </section>
+  </main>
+  <script src="assets/semantic/semantic-room.js" defer></script>
+</body>
+</html>

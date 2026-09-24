@@ -1,0 +1,186 @@
+.semantic-scene {
+  --semantic-night: #10232d;
+  --semantic-panel: #19313a;
+  --semantic-line: #45616b;
+  --semantic-ice: #a9cbd0;
+  --semantic-copper: #d49a77;
+  display: grid;
+  grid-template-columns: minmax(0, 1.8fr) minmax(290px, 0.72fr);
+  min-height: 570px;
+  overflow: hidden;
+  border: 1px solid #5a7278;
+  background: var(--semantic-night);
+  color: #f0f4f1;
+  font-family: inherit;
+}
+
+.semantic-scene *,
+.semantic-scene *::before,
+.semantic-scene *::after { box-sizing: border-box; }
+
+.semantic-scene__stage {
+  position: relative;
+  min-height: 570px;
+  overflow: hidden;
+  background: #10232d;
+}
+
+.semantic-scene__fallback-image,
+.semantic-scene__canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.semantic-scene__fallback-image {
+  transition: opacity 350ms ease;
+}
+.semantic-scene__fallback-image img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+.semantic-scene__canvas { opacity: 0; }
+.semantic-scene.is-ready .semantic-scene__canvas { opacity: 1; }
+.semantic-scene.is-ready .semantic-scene__fallback-image { opacity: 0; }
+
+.semantic-scene__caption {
+  position: absolute;
+  z-index: 2;
+  left: 24px;
+  bottom: 19px;
+  max-width: min(65%, 430px);
+  margin: 0;
+  padding: 8px 11px;
+  background: #0b1c25d9;
+  color: #cfdddc;
+  font-size: 11px;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+}
+
+.semantic-scene__node {
+  position: absolute;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 140px;
+  padding: 9px 12px;
+  transform: translate(-50%, -50%);
+  border: 1px solid #9ec7cb99;
+  border-radius: 2px;
+  background: #112b35e8;
+  color: #e8f4f3;
+  box-shadow: 0 5px 22px #06131b78;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.semantic-scene__node::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  flex: none;
+  border-radius: 50%;
+  background: var(--semantic-ice);
+  box-shadow: 0 0 10px #9ad4db;
+}
+
+.semantic-scene__node:hover,
+.semantic-scene__node[aria-pressed='true'] {
+  border-color: var(--semantic-copper);
+  background: #30414a;
+  box-shadow: 0 0 0 3px #d49a7728, 0 6px 24px #06131b87;
+}
+
+.semantic-scene__node[aria-pressed='true']::before { background: var(--semantic-copper); box-shadow: 0 0 10px #ecad7d; }
+.semantic-scene__node:focus-visible,
+.semantic-scene summary:focus-visible { outline: 3px solid var(--semantic-copper); outline-offset: 3px; }
+
+.semantic-scene__panel {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: clamp(26px, 3vw, 46px);
+  border-left: 1px solid #58757d6e;
+  background: linear-gradient(155deg, #213d47, var(--semantic-panel) 60%, #102831);
+}
+
+.semantic-scene__kicker {
+  margin: 0 0 21px;
+  color: var(--semantic-copper);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.semantic-scene__panel h3 {
+  max-width: 12em;
+  margin: 0 0 19px;
+  color: #f5f6f0;
+  font-size: clamp(28px, 2.7vw, 43px);
+  font-weight: 650;
+  line-height: 1.25;
+  letter-spacing: -0.045em;
+}
+
+.semantic-scene__intro,
+.semantic-scene__notice {
+  color: #c4d5d7;
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.semantic-scene__intro { margin: 0 0 30px; }
+.semantic-scene__facts { border-top: 1px solid var(--semantic-line); }
+.semantic-scene details { border-bottom: 1px solid var(--semantic-line); }
+.semantic-scene summary {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 17px 0;
+  color: #dce9e8;
+  font-size: 14px;
+  font-weight: 650;
+  list-style: none;
+  cursor: pointer;
+}
+.semantic-scene summary::-webkit-details-marker { display: none; }
+.semantic-scene summary::after { content: '+'; color: var(--semantic-ice); font-size: 19px; font-weight: 400; line-height: 0.8; }
+.semantic-scene details[open] summary { color: #f3d4bd; }
+.semantic-scene details[open] summary::after { content: '−'; color: var(--semantic-copper); }
+.semantic-scene details p { margin: 0 0 17px; color: #c9d8d8; font-size: 13px; line-height: 1.8; }
+.semantic-scene details dl { display: grid; grid-template-columns: 54px 1fr; gap: 7px 14px; margin: 0 0 20px; font-size: 12px; line-height: 1.65; }
+.semantic-scene details dt { color: #95b5b8; }
+.semantic-scene details dd { margin: 0; color: #e2eceb; }
+.semantic-scene__notice { margin: auto 0 0; padding-top: 28px; font-size: 11px; }
+
+@media (max-width: 900px) {
+  .semantic-scene { grid-template-columns: minmax(0, 1fr); }
+  .semantic-scene__stage { min-height: clamp(410px, 58vw, 560px); }
+  .semantic-scene__panel { border-left: 0; border-top: 1px solid #58757d6e; }
+  .semantic-scene__panel h3 { max-width: none; }
+  .semantic-scene__notice { margin-top: 6px; }
+}
+
+@media (max-width: 520px) {
+  .semantic-scene__stage { min-height: 410px; }
+  .semantic-scene__caption { left: 12px; bottom: 12px; max-width: 75%; font-size: 10px; }
+  .semantic-scene__node { gap: 5px; padding: 7px 8px; font-size: 10px; }
+  .semantic-scene__panel { padding: 28px 22px 32px; }
+}
+
+@media (max-width: 350px) {
+  .semantic-scene__fallback-image img { object-fit: contain; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .semantic-scene__fallback-image,
+  .semantic-scene__node { transition: none; }
+}
