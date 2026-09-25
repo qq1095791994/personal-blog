@@ -12,11 +12,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="preload" href="assets/work/concept-intelligent-space.webp" as="image">
+  <link rel="preload" href="assets/work/fantasy-04.webp" as="image">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="assets/cg/spatial-scene.css">
   <link rel="stylesheet" href="assets/semantic/semantic-room.css">
   <link rel="stylesheet" href="assets/intelligence.css">
+  <link rel="stylesheet" href="assets/world/world-viewer.css?v=20260925">
 </head>
 <body>
   <a class="skip-link" href="#main">跳到正文</a>
@@ -27,18 +27,24 @@
   </header>
 
   <main id="main">
-    <section class="hero" id="top" aria-labelledby="hero-title">
-      <img class="hero-image" src="assets/work/concept-intelligent-space.webp" alt="智能空间主题概念视觉：带有发光装置的现代建筑空间" fetchpriority="high">
-      <div class="cg-scene" data-cg-scene aria-hidden="true"></div>
+    <section class="hero" id="top" data-world-hero aria-labelledby="hero-title">
+      <img class="hero-image" src="assets/work/fantasy-04.webp" alt="本人 UE 仙侠作品中的古街场景原图" fetchpriority="high">
+      <div class="world-stage" data-world-stage role="region" aria-label="基于 UE 仙侠作品重构的可旋转 3D 古街" tabindex="0"></div>
       <div class="hero-shade"></div>
       <div class="hero-copy">
-        <p class="hero-id">江汉 <span></span> AI × 智能 × 3D 空间</p>
-        <h1 id="hero-title">让 AI 看懂空间，<br>让 3D 场景回应。</h1>
-        <p class="hero-lede">以三维资产、实时引擎和空间数据为基础，探索模型生成、关系理解、物体语义与具身交互；让同一个空间继续生长为图片、视频和体验。</p>
-        <a class="hero-action" href="#intelligence">探索空间智能 <span aria-hidden="true">↓</span></a>
+        <p class="hero-id">江汉 <span></span> 《UE 仙侠》交互重构</p>
+        <h1 id="hero-title">走进一座<br>仙侠古街。</h1>
+        <p class="hero-lede">以我的《UE 仙侠》作品画面为参照，重构可 360° 环绕、可进入观看的实时 3D 街区。</p>
+        <a class="hero-action" href="#work">继续看我的作品 <span aria-hidden="true">↓</span></a>
       </div>
-      <div class="hero-scene-cue" aria-hidden="true"><span>SPATIAL INTELLIGENCE</span><span>移动光标，探索空间的层次</span></div>
-      <div class="hero-bottom"><span>成都 · 视觉技术 / 团队管理</span><span>实时 CG + AI 后备图 · 非实际项目</span></div>
+      <div class="world-identity"><strong>《UE 仙侠》· 古街</strong><span>基于原作画面重构的可探索空间</span></div>
+      <div class="world-controls" aria-label="虚拟空间控制">
+        <div class="world-controls__views" role="group" aria-label="镜头位置"><button type="button" data-world-view="entry" aria-pressed="true">入口</button><button type="button" data-world-view="street" aria-pressed="false">街心</button><button type="button" data-world-view="aerial" aria-pressed="false">俯瞰</button></div>
+        <div class="world-controls__actions"><button type="button" data-world-mode aria-pressed="false">进入街道</button><button type="button" data-world-source>原作对照</button><button type="button" data-world-fullscreen>全屏查看</button></div>
+        <p class="world-status" data-world-status aria-live="polite">正在构建空间…</p>
+      </div>
+      <div class="world-move-pad" aria-label="漫游方向控制"><button type="button" data-world-move="forward" aria-label="向前移动">↑</button><button type="button" data-world-move="left" aria-label="向左移动">←</button><button type="button" data-world-move="back" aria-label="向后移动">↓</button><button type="button" data-world-move="right" aria-label="向右移动">→</button></div>
+      <div class="hero-bottom"><span>成都 · 视觉技术 / 团队管理</span><span>真实作品参照 · 实时 3D 重构</span></div>
     </section>
 
     <div class="discipline-strip" aria-label="工作方向"><span>高精度模型</span><i></i><span>空间关系</span><i></i><span>物体语义</span><i></i><span>具身交互</span><i></i><span>视觉生产</span></div>
@@ -149,11 +155,12 @@
 
     <section class="contact" id="contact"><div><p>江汉 · 成都</p><h2>让空间被看见，<br>也被理解。</h2><a href="mailto:1095791994@qq.com">1095791994@qq.com <span aria-hidden="true">↗</span></a></div><p class="contact-aside">AI × 3D 空间 / 实时视觉 / 车机 HMI / UE 场景</p></section>
   </main>
-  <footer><span>© <span id="year">2026</span> 江汉</span><span>项目原图来自个人作品资料；AI 概念视觉与辅助后期封面均已标注。</span><a href="#top">回到顶部 ↑</a></footer>
+  <footer><span>© <span id="year">2026</span> 江汉</span><span>项目原图来自个人作品资料；交互空间、AI 概念视觉与辅助后期封面均已标注。</span><a href="#top">回到顶部 ↑</a></footer>
+  <dialog class="world-source-dialog" data-world-source-dialog aria-labelledby="world-source-title"><div class="world-source-dialog__head"><div><small>作品参照 / 交互重构</small><h2 id="world-source-title">从《UE 仙侠》画面，重建可探索的街区。</h2><p>上方虚拟空间参考了以下本人作品截图中的街道轴线、建筑、牌坊、灯笼与摊位布局。原始 UE 场景模型未包含在作品资料中，因此网页里的 3D 几何是新制作的近似重构，并非原项目模型或 AI 精确还原。</p></div><button type="button" data-world-source-close aria-label="关闭原作对照">×</button></div><div class="world-source-dialog__grid"><figure><img src="assets/work/fantasy-04.webp" alt="UE 仙侠古街正面视角原作" loading="lazy"><figcaption>正街视角：建筑立面、石路、入口牌坊和灯笼的主要视觉依据。</figcaption></figure><figure><img src="assets/work/fantasy-05.webp" alt="UE 仙侠侧巷视角原作" loading="lazy"><figcaption>侧巷视角：木楼、红柱、灰瓦和街边物件的参照。</figcaption></figure><figure><img src="assets/work/fantasy-06.webp" alt="UE 仙侠古街鸟瞰布局原作" loading="lazy"><figcaption>鸟瞰视角：道路、屋顶、花坛与摊位的空间布局参照。</figcaption></figure></div></dialog>
 
   <dialog id="project-dialog" class="project-dialog" aria-labelledby="dialog-title"><button class="dialog-close" type="button" aria-label="关闭项目图集">×</button><div class="dialog-layout"><div class="dialog-media"><img id="dialog-image" alt=""><div class="dialog-controls"><button id="prev-image" type="button" aria-label="上一张图片">←</button><span id="image-count"></span><button id="next-image" type="button" aria-label="下一张图片">→</button></div><p id="dialog-image-note" class="dialog-image-note"></p><div id="dialog-thumbs" class="dialog-thumbs"></div></div><div class="dialog-copy"><p id="dialog-category"></p><h2 id="dialog-title"></h2><p id="dialog-description"></p><dl><div><dt>我的工作</dt><dd id="dialog-role"></dd></div><div><dt>图集</dt><dd id="dialog-gallery-size"></dd></div></dl></div></div></dialog>
-  <script src="site.js" defer></script>
-  <script src="assets/cg/spatial-scene.js" defer></script>
+  <script src="site.js?v=20260925" defer></script>
+  <script src="assets/world/world-viewer.bundle.js?v=20260925" type="module"></script>
   <script src="assets/semantic/semantic-room.js" defer></script>
 </body>
 </html>

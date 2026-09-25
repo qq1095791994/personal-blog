@@ -47,7 +47,7 @@ const projects = {
     title: '仙侠：建立可以进入的世界',
     description: '以山体、屋檐、路径和远景组织空间层次，让东方幻想世界在实时引擎中形成连续的观看体验。',
     role: '场景搭建、资产整合与环境氛围表现。',
-    images: path('fantasy', 5),
+    images: path('fantasy', 6),
     enhanced: 'assets/work/graded/fantasy-04.webp',
     enhancedOriginalIndex: 4
   }

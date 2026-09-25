@@ -1,0 +1,11 @@
+{
+  "name": "jiang-han-portfolio",
+  "private": true,
+  "scripts": {
+    "build:world": "esbuild assets/world/world-viewer.js --bundle --minify --format=esm --target=es2020 --outfile=assets/world/world-viewer.bundle.js --legal-comments=linked"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12",
+    "three": "0.186.1"
+  }
+}
